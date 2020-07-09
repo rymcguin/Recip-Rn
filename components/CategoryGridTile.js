@@ -1,6 +1,11 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { AppLoading } from "expo";
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  Platform,
+} from "react-native";
 
 const CategoryGridTile = (props) => {
   return (
@@ -17,6 +22,12 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 15,
     height: 150,
+    borderRadius: 20,
+    overflow:
+      Platform.OS === "android" && Platform.Version >= 21
+        ? "hidden"
+        : "visible",
+    elevation: 2,
   },
   boxes: {
     flex: 1,
@@ -24,8 +35,9 @@ const styles = StyleSheet.create({
     shadowColor: "black",
     shadowOpacity: 0.2,
     shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 20,
-    padding: 20,
+    shadowRadius: 5,
+    padding: 10,
+
     justifyContent: "flex-end",
     alignItems: "flex-end",
   },

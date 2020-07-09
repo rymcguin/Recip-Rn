@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Button, FlatList } from "react-native";
-import Colors from "../constants/Colors";
+import { View, Text, StyleSheet, FlatList } from "react-native";
+
 import { CATEGORIES, MEALS } from "../data/dummyData";
 import MealItem from "../components/MealItem";
 

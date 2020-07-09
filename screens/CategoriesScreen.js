@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  Platform,
-} from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { CATEGORIES } from "../data/dummyData";
 import CategoryGridTile from "../components/CategoryGridTile";
 
@@ -18,7 +11,7 @@ const CategoriesScreen = (props) => {
         color={itemData.item.color}
         onSelect={() => {
           props.navigation.navigate({
-            routeName: 'CategoryMeals',
+            routeName: "CategoryMeals",
             params: {
               categoryID: itemData.item.id,
             },
@@ -37,11 +30,9 @@ const CategoriesScreen = (props) => {
   );
 };
 
-
 const styles = StyleSheet.create({
   grid: {
     flex: 1,
-
     margin: 15,
     height: 150,
   },
